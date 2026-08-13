@@ -542,9 +542,13 @@ html.lenis,html.lenis body{height:auto}
 <button onClick="{{ faq.f3 }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;background:none;border:0;text-align:left;cursor:pointer;color:inherit;font-size:19px;font-weight:400;letter-spacing:-0.01em" style-hover="color:#E94B35"><span>How long does a project take?</span><span style="color:#E94B35;font-size:20px">{{ faqSign3 }}</span></button>
 <sc-if value="{{ faqOpen3 }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:15px;line-height:1.65;color:rgba(23,23,22,.64);font-weight:300">It depends on scope and condition. You receive a schedule with the estimate, and we keep you updated as the work moves through preparation, application and final detailing.</p></sc-if>
 </div>
-<div data-reveal="" style="border-top:1px solid #D8D5CE;border-bottom:1px solid #D8D5CE">
+<div data-reveal="" style="border-top:1px solid #D8D5CE">
 <button onClick="{{ faq.f4 }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;background:none;border:0;text-align:left;cursor:pointer;color:inherit;font-size:19px;font-weight:400;letter-spacing:-0.01em" style-hover="color:#E94B35"><span>What does an estimate cost?</span><span style="color:#E94B35;font-size:20px">{{ faqSign4 }}</span></button>
 <sc-if value="{{ faqOpen4 }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:15px;line-height:1.65;color:rgba(23,23,22,.64);font-weight:300">Nothing. Estimates are free and carry no obligation. We walk the space, discuss what you want to achieve and put the scope in writing.</p></sc-if>
+</div>
+<div data-reveal="" style="border-top:1px solid #D8D5CE;border-bottom:1px solid #D8D5CE">
+<button onClick="{{ faq.f5 }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;background:none;border:0;text-align:left;cursor:pointer;color:inherit;font-size:19px;font-weight:400;letter-spacing:-0.01em" style-hover="color:#E94B35"><span>Are you insured?</span><span style="color:#E94B35;font-size:20px">{{ faqSign5 }}</span></button>
+<sc-if value="{{ faqOpen5 }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 26px;max-width:60ch;font-size:15px;line-height:1.65;color:rgba(23,23,22,.64);font-weight:300">Yes. Paint 4 Perfection carries full liability insurance and workers&#8217; compensation coverage, and we are happy to provide a certificate of insurance before work begins &#8212; homeowners, property managers and building owners can request one at any time.</p></sc-if>
 </div>
 </div>
 </div>
@@ -723,31 +727,10 @@ html.lenis,html.lenis body{height:auto}
 <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start">
 <div data-reveal="" style="grid-column:span 5;position:sticky;top:110px;overflow:hidden;aspect-ratio:3/4;background:#ECEBE6"><img loading="lazy" decoding="async" data-parallax="" data-speed="0.06" src="assets/contact-house-opt.jpg" alt="A Paint 4 Perfection painter finishing exterior window trim" style="display:block;width:100%;height:112%;object-fit:cover;object-position:50% 45%;margin-top:-6%"></div>
 <div style="grid-column:span 7;padding-left:2vw;display:flex;flex-direction:column;gap:56px">
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px">
-<label data-reveal="" style="display:flex;flex-direction:column;gap:9px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Name</span><input type="text" placeholder="Your name" style="padding:14px 0;border:0;border-bottom:1px solid #D8D5CE;background:transparent;font-family:inherit;font-size:16px;color:#171716;outline:none;transition:border-color 400ms" style-focus="border-color:#E94B35"></label>
-<label data-reveal="" style="display:flex;flex-direction:column;gap:9px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Email</span><input type="email" placeholder="you@example.com" style="padding:14px 0;border:0;border-bottom:1px solid #D8D5CE;background:transparent;font-family:inherit;font-size:16px;color:#171716;outline:none;transition:border-color 400ms" style-focus="border-color:#E94B35"></label>
-<label data-reveal="" style="display:flex;flex-direction:column;gap:9px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Phone</span><input type="tel" placeholder="914 000 0000" style="padding:14px 0;border:0;border-bottom:1px solid #D8D5CE;background:transparent;font-family:inherit;font-size:16px;color:#171716;outline:none;transition:border-color 400ms" style-focus="border-color:#E94B35"></label>
-<label data-reveal="" style="display:flex;flex-direction:column;gap:9px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Property location</span><input type="text" placeholder="Town, NY" style="padding:14px 0;border:0;border-bottom:1px solid #D8D5CE;background:transparent;font-family:inherit;font-size:16px;color:#171716;outline:none;transition:border-color 400ms" style-focus="border-color:#E94B35"></label>
-<div data-reveal="" style="grid-column:span 2;display:flex;flex-direction:column;gap:12px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Project type</span>
-<div style="display:flex;flex-wrap:wrap;gap:9px">
-<button onClick="{{ pick.residential }}" style="padding:11px 17px;border:1px solid {{ s.p_residential.bd }};background:{{ s.p_residential.bg }};color:{{ s.p_residential.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Residential</button>
-<button onClick="{{ pick.commercial }}" style="padding:11px 17px;border:1px solid {{ s.p_commercial.bd }};background:{{ s.p_commercial.bg }};color:{{ s.p_commercial.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Commercial</button>
-<button onClick="{{ pick.interior }}" style="padding:11px 17px;border:1px solid {{ s.p_interior.bd }};background:{{ s.p_interior.bg }};color:{{ s.p_interior.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Interior</button>
-<button onClick="{{ pick.exterior }}" style="padding:11px 17px;border:1px solid {{ s.p_exterior.bd }};background:{{ s.p_exterior.bg }};color:{{ s.p_exterior.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Exterior</button>
-<button onClick="{{ pick.deck }}" style="padding:11px 17px;border:1px solid {{ s.p_deck.bd }};background:{{ s.p_deck.bg }};color:{{ s.p_deck.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Deck</button>
-<button onClick="{{ pick.other }}" style="padding:11px 17px;border:1px solid {{ s.p_other.bd }};background:{{ s.p_other.bg }};color:{{ s.p_other.fg }};border-radius:999px;font-size:12px;cursor:pointer;transition:all 350ms cubic-bezier(.16,1,.3,1)">Other</button>
-</div>
-</div>
-<label data-reveal="" style="grid-column:span 2;display:flex;flex-direction:column;gap:9px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5)">Scope &amp; timing</span><textarea rows="4" placeholder="Rooms, surfaces, condition, when you would like to start" style="padding:14px 0;border:0;border-bottom:1px solid #D8D5CE;background:transparent;font-family:inherit;font-size:16px;color:#171716;outline:none;resize:vertical;transition:border-color 400ms" style-focus="border-color:#E94B35"></textarea></label>
-<div data-reveal="" style="grid-column:span 2;display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:8px">
-<button onClick="{{ submit }}" data-cta="" style="display:inline-flex;align-items:center;gap:12px;padding:17px 26px;background:#E94B35;color:#FFF;border:0;border-radius:4px;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background 450ms cubic-bezier(.16,1,.3,1),transform 450ms" style-hover="background:#F05B44;transform:translateY(-3px)">Send Request <span>&#8594;</span></button>
-<span data-submitnote="" style="font-size:12.5px;color:rgba(23,23,22,.5)">Prototype form &#8212; not yet wired to email.</span>
-</div>
-</div>
 <div>
 <div data-reveal="" style="border-top:1px solid #D8D5CE;padding:22px 0"><div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5);margin-bottom:8px">Phone</div><a href="tel:9142170481" style="font-family:'Instrument Serif',serif;font-size:32px;letter-spacing:-0.02em">914 217 0481</a></div>
 <div data-reveal="" style="border-top:1px solid #D8D5CE;padding:22px 0"><div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5);margin-bottom:8px">Email</div><a href="mailto:frank@paint4perfection.com" style="font-size:17px">frank@paint4perfection.com</a></div>
-<div data-reveal="" style="border-top:1px solid #D8D5CE;padding:22px 0"><div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5);margin-bottom:8px">Studio</div><div style="font-size:17px;line-height:1.5">Hawthorne, NY</div></div>
+<div data-reveal="" style="border-top:1px solid #D8D5CE;padding:22px 0"><div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(23,23,22,.5);margin-bottom:8px">Studio</div><div style="font-size:17px;line-height:1.5">Westchester, NY</div></div>
 <div data-reveal="" style="border-top:1px solid #D8D5CE;border-bottom:1px solid #D8D5CE;padding:22px 0;display:flex;gap:18px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase">
 <a href="https://www.facebook.com/painting.frankd" target="_blank" rel="noopener">Facebook</a>
 <a href="http://instagram.com/paint4perfection" target="_blank" rel="noopener">Instagram</a>
@@ -829,7 +812,7 @@ const PROJECTS = [
 const BA = {
   estate: { before: 'assets/estate-before.jpg', after: 'assets/estate-after.jpg' },
   door: { before: 'assets/ovaldoor-before.jpg', after: 'assets/ovaldoor-after.jpg' },
-  garage: { before: 'assets/garage-before.jpg', after: 'assets/garage-after.jpg' },
+  garage: { before: 'assets/garage-after.jpg', after: 'assets/garage-before.jpg' },
   deck: { before: 'assets/deck-progress.jpg', after: 'assets/deck-after.jpg' }
 };
 
@@ -1121,7 +1104,7 @@ class Component extends DCLogic {
     const nav = {};
     ROUTES.forEach((r) => { nav[r] = this.navTo(r); });
     const faq = {};
-    [0, 1, 2, 3, 4].forEach((i) => { faq['f' + i] = () => this.setState({ faq: st.faq === i ? -1 : i }); });
+    [0, 1, 2, 3, 4, 5].forEach((i) => { faq['f' + i] = () => this.setState({ faq: st.faq === i ? -1 : i }); });
     const filters = {};
     [['all', 'All'], ['exteriors', 'Exteriors'], ['entryways', 'Entryways'], ['interiors', 'Interiors'], ['decks', 'Decks'], ['commercial', 'Commercial']]
       .forEach(([k, v]) => { filters[k] = () => this.setState({ filter: v }); });
@@ -1156,9 +1139,9 @@ class Component extends DCLogic {
       isAbout: st.route === 'about',
       isContact: st.route === 'contact',
       shownProjects: st.filter === 'All' ? PROJECTS : PROJECTS.filter((p) => p.cat === st.filter),
-      faqOpen0: st.faq === 0, faqOpen1: st.faq === 1, faqOpen2: st.faq === 2, faqOpen3: st.faq === 3, faqOpen4: st.faq === 4,
+      faqOpen0: st.faq === 0, faqOpen1: st.faq === 1, faqOpen2: st.faq === 2, faqOpen3: st.faq === 3, faqOpen4: st.faq === 4, faqOpen5: st.faq === 5,
       faqSign0: st.faq === 0 ? '–' : '+', faqSign1: st.faq === 1 ? '–' : '+', faqSign2: st.faq === 2 ? '–' : '+',
-      faqSign3: st.faq === 3 ? '–' : '+', faqSign4: st.faq === 4 ? '–' : '+'
+      faqSign3: st.faq === 3 ? '–' : '+', faqSign4: st.faq === 4 ? '–' : '+', faqSign5: st.faq === 5 ? '–' : '+'
     };
   }
 }
